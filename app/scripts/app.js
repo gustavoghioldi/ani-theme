@@ -15,7 +15,7 @@ angular
   ])
   .config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.when('/dashboard', '/dashboard/overview');
+    $urlRouterProvider.when('/dashboard', '/dashboard/miPerfil');
     $urlRouterProvider.otherwise('/login');
 
     $stateProvider
@@ -36,10 +36,16 @@ angular
           templateUrl: 'views/dashboard.html',
           controller: 'DashboardCtrl'
         })
-          .state('overview', {
-            url: '/overview',
+          .state('miPerfil', {
+            url: '/miPerfil',
             parent: 'dashboard',
-            templateUrl: 'views/dashboard/overview.html'
+            templateUrl: 'views/dashboard/miPerfil.html'
+          })
+          .state('miPerfil/facebook', {
+            url: '/miPerfil/facebook',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/perfil/facebook.html',
+            controller: 'FacebookCtrl'  
           })
           .state('reports', {
             url: '/reports',
