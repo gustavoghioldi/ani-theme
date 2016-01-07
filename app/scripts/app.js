@@ -41,16 +41,23 @@ angular
             parent: 'dashboard',
             templateUrl: 'views/dashboard/miPerfil.html'
           })
+            .state('orders',{
+            url: '/orders',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/orders.html'
+          })
           .state('miPerfil/facebook', {
             url: '/miPerfil/facebook',
             parent: 'dashboard',
             templateUrl: 'views/dashboard/perfil/facebook.html',
             controller: 'FacebookCtrl'  
           })
-          .state('reports', {
-            url: '/reports',
+          
+          .state('products', {
+            url: '/products',
             parent: 'dashboard',
-            templateUrl: 'views/dashboard/reports.html'
+            templateUrl: 'views/dashboard/products.html',
+            controller: "ProductsCtrl"
           });
 
   });
