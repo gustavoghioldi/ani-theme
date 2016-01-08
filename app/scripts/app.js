@@ -52,6 +52,13 @@ angular
             templateUrl: 'views/dashboard/perfil/facebook.html',
             controller:'FacebookCtrl'
           })
+
+          .state('products/addProducts', {
+            url: '/products/addProducts',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/products/addProducts.html',
+            controller:'AddProductsCtrl'
+          })
           
           .state('products', {
             url: '/products',
