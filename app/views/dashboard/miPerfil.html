@@ -2,9 +2,34 @@
 	<a ui-sref="miPerfil/facebook" class="btn btn-primary btn-outline">FaceBook</a>
 	<a ui-sref="" class="btn btn-primary btn-outline">Twitter</a>
 	<a ui-sref="" class="btn btn-primary btn-outline">Mercado Libre</a>
-	<div class="jumbotron">
+	<div class="jumbotron" style="background-color:#3CA2E0">
 		<div class="container">
-			aca todo lo referente al usuario
-		</div>
+			<form role="form" ng-submit="submit()">
+
+				<div class="form-content">
+					<div class="form-group">
+						<input type="text" class="form-control input-underline input-lg" id="" placeholder="nombre">
+					</div>
+
+					<div class="form-group">
+						<input type="text" class="form-control input-underline input-lg" id="" placeholder="apellido">
+					</div>
+
+					<div class="form-group">
+						<input type="email" class="form-control input-underline input-lg" id="" placeholder="email">
+					</div>
+
+					<div class="form-group">
+						<input type="phone" class="form-control input-underline input-lg" id="" placeholder="telefono">
+					</div>
+
+				</div>
+
+				<button type="submit" class="btn btn-white btn-outline btn-lg btn-rounded">Guardar</button>
+
+			</form>
+
+	
+	</div>
 	</div>
 </div>

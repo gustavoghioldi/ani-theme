@@ -45,7 +45,7 @@ angular
             url: '/miPerfil/facebook',
             parent: 'dashboard',
             templateUrl: 'views/dashboard/perfil/facebook.html',
-            controller: 'FacebookCtrl'  
+            controller:'FacebookCtrl'
           })
           .state('reports', {
             url: '/reports',

@@ -8,10 +8,8 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('FacebookCtrl', function($scope, $location) {
-   
-    $scope.submit = function() {
-      alert("tiro un post");
-    }
+  .controller('MiPerfilCtrl', function($scope, $state) {
+
+    $scope.$state = $state;
 
   });
