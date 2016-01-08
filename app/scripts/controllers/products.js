@@ -8,22 +8,16 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('ProductsCtrl', function($scope, $location) {
-    $scope.libros = [
-        {'id':1, 'titulo': 'The design of every day things', 'autor': 'Don Norman'},
-        {'id':2,'titulo': 'El nombre del viento', 'autor': 'Patrik Rufus'},
-        {'id':3,'titulo': 'Game of Thrones', 'autor': 'R.R. Martin'}
-    ];
-
-    $scope.switch = true;
+  .controller('ProductsCtrl',  function($scope, $http) {
+    $http.get("http://www.w3schools.com/angular/customers.php")
+        .then(function(response) {$scope.names = response.data.records;});
 
     $scope.publicar = function(){
-    	alert("publico este producto!!!");
+        alert("publico este producto!!!");
     }
 
     $scope.modificar = function(){
-    	alert("modifico este producto!!!");
+        alert("modifico este producto!!!");
     }
-
-  });
+});
 
