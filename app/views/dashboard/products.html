@@ -1,0 +1,19 @@
+<div>
+	<h2>Productos <small>Altas, bajas, modificaciones y publicacion de productos</small></h2>
+	<span class="glyphicon glyphicon-dashboard bg-fade"></span>
+	<div class="jumbotron">
+		<div class="container" >
+
+			<table ng-repeat="libro in libros">
+				<tr>
+					<td>{{libro.id}} - </td>   
+					<td>{{libro.titulo}} - </td>
+					<td>{{libro.autor}} | </td>
+					<td><a href="" ng-click="modificar()">Modificar | </a></td>
+					<td><a href="" ng-click="publicar()">Publicar</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<a class="btn btn-primary btn-outline">Nuevo</a>
+</div>
