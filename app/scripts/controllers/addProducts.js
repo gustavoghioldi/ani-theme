@@ -8,8 +8,10 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('AddProductsCtrl', function($scope, $state) {
-
-    $scope.$state = $state;
+  .controller('AddProductsCtrl', function($scope,$http,  $location) {
+  	
+    $scope.submit = function(){
+    	
+    }
 
   });

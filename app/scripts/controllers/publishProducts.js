@@ -8,12 +8,10 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('MiPerfilCtrl', function($scope, $state) {
-
-    $scope.$state = $state;
+  .controller('PublishProductsCtrl', function($scope,$http,  $location) {
 
     $scope.submit = function(){
-    	alert("muchos gorros!!");
+    	alert("asasdasdasd");
     }
 
   });

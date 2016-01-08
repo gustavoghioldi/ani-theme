@@ -7,17 +7,15 @@
  * # MainCtrl
  * Controller of yapp
  */
+
 angular.module('yapp')
-  .controller('ProductsCtrl',  function($scope, $http) {
-    $http.get("http://www.w3schools.com/angular/customers.php")
-        .then(function(response) {$scope.names = response.data.records;});
+  .controller('ProductsCtrl',  function($scope,$state,  $http) {
+    $http.get("http://esocialcommerce.devteam.com.ar/producto")
+        .then(function(response) {$scope.products = response.data;});
 
     $scope.publicar = function(){
-        alert("publico este producto!!!");
+        $state.go("products/publishProducts");
     }
 
-    $scope.modificar = function(){
-        alert("modifico este producto!!!");
-    }
 });
 

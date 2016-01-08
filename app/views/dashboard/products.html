@@ -4,11 +4,13 @@
 	<div class="jumbotron">
 		<div class="container" >
 
-			<table ng-repeat="libro in names">
+			<table ng-repeat="product in products">
 				<tr>
-					<td>{{libro.Name}} - </td>   
-					<td>{{libro.City}} - </td>
-					<td>{{libro.Country}} | </td>
+					<td>{{product.nombre}} - </td>   
+					<td>{{product.codigo}} - </td>
+					<td>{{product.stock}} - </td>
+					<td>{{product.codigo}} - </td>
+					<td>{{product.descripcion}} | </td>
 					<td><a href="" ng-click="modificar()">Modificar | </a></td>
 					<td><a href="" ng-click="publicar()">Publicar</a></td>
 				</tr>

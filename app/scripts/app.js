@@ -59,7 +59,12 @@ angular
             templateUrl: 'views/dashboard/products/addProducts.html',
             controller:'AddProductsCtrl'
           })
-          
+          .state('products/publishProducts', {
+            url: '/products/publishProducts',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/products/publishProducts.html',
+            controller: "PublishProductsCtrl"
+          })
           .state('products', {
             url: '/products',
             parent: 'dashboard',
