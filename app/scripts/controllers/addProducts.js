@@ -8,10 +8,12 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('AddProductsCtrl', function($scope,$http,  $location) {
-  	
+  .controller('AddProductsCtrl', function($scope, $location) {
+
     $scope.submit = function(){
-    	
+    	$location.path('/dashboard');
+
+      return false;
     }
 
   });

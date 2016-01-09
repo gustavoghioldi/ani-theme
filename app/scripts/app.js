@@ -60,7 +60,7 @@ angular
             controller:'AddProductsCtrl'
           })
           .state('products/publishProducts', {
-            url: '/products/publishProducts',
+            url: '/products/publishProducts/:productId',
             parent: 'dashboard',
             templateUrl: 'views/dashboard/products/publishProducts.html',
             controller: "PublishProductsCtrl"

@@ -8,19 +8,7 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('PublishProductsCtrl', function($scope,$http,  $location) {
-
-  	$scope.paymentView = true;
-
-  	$scope.shippingView = true;
-
-  	$scope.redSocial = function (){
-  		$scope.paymentView = false;
-  	}
-
-  	$scope.paymentMethod = function(){
-  		$scope.shippingView = false;
-  	}
-    
+  .controller('PublishProductsCtrl', function($scope,$http,  $state) {
+    $scope.productId = $state.params.productId;
 
   });

@@ -13,8 +13,8 @@ angular.module('yapp')
     $http.get("http://esocialcommerce.devteam.com.ar/producto")
         .then(function(response) {$scope.products = response.data;});
 
-    $scope.publicar = function(){
-        $state.go("products/publishProducts");
+    $scope.publicar = function(id){
+        $state.go("products/publishProducts", {productId:id});
     }
 
 });

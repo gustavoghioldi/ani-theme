@@ -1,5 +1,5 @@
 <div>
-	<h2>Publicar Producto</h2>
+	<h2>Publicar Producto {{productId}}</h2>
 	<span class="glyphicon glyphicon-pencil bg-fade"></span>
 	<div class="jumbotron" style="background-color:#3CA2E0">
 		<div class="container">
@@ -8,25 +8,32 @@
 				<input type="checkbox" name="animal" value="Cat" />TWITTER <br />
 				<input type="checkbox" name="animal" value="Dog" />FACEBOOK<br />
 				<input type="checkbox" name="animal" value="Bird" />MERCADOLIBRE<br />
-				<input ng-click="redSocial()" type="button" value="Continuar" />
+
 			</fieldset>
 
 		</div>
 	</div>
-	<div class="jumbotron" style="background-color:#3CA2E0" ng-hide="paymentView">
+
+		<div class="jumbotron" style="background-color:#3CA2E0" >
 		<div class="container">
 		<fieldset>
-				<legend>Red Social?</legend>
+				<legend>Payment Method?</legend>
 				<input type="checkbox" name="animal" value="Cat" />TODOPAGO<br />
 				<input type="checkbox" name="animal" value="Dog" />MERCADOPAGO<br />
 				<input type="checkbox" name="animal" value="Bird" />DECIDIR<br />
-					<input ng-click="paymentMethod()" type="button" value="Continuar" />
-		
-				
 			</fieldset>
 		</div>
 	</div>
-	<div class="jumbotron" style="background-color:#3CA2E0" ng-hide="shippingView">
-		<div class="container"></div>
+		<div class="jumbotron" style="background-color:#3CA2E0" >
+		<div class="container">
+		<fieldset>
+				<legend>Shipping Mtthod?</legend>
+				<input type="checkbox" name="animal" value="Cat" />TODOPAGO<br />
+				<input type="checkbox" name="animal" value="Dog" />MERCADOPAGO<br />
+				<input type="checkbox" name="animal" value="Bird" />DECIDIR<br />
+			</fieldset>
+		</div>
 	</div>
+	<a class="btn btn-primary btn-lg btn-outline btn-rounded">Publicar</a>
+
 </div>
