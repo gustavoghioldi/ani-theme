@@ -1,38 +1,32 @@
 <div>
 	<h2>Publicar Producto</h2>
 	<span class="glyphicon glyphicon-pencil bg-fade"></span>
-		<div class="jumbotron" style="background-color:#3CA2E0">
+	<div class="jumbotron" style="background-color:#3CA2E0">
 		<div class="container">
-			<form role="form" ng-submit="submit()"> 
+			<fieldset>
+				<legend>Red Social?</legend>
+				<input type="checkbox" name="animal" value="Cat" />TWITTER <br />
+				<input type="checkbox" name="animal" value="Dog" />FACEBOOK<br />
+				<input type="checkbox" name="animal" value="Bird" />MERCADOLIBRE<br />
+				<input ng-click="redSocial()" type="button" value="Continuar" />
+			</fieldset>
 
-				<div class="form-content">
-					<div class="form-group">
-						<input type="text" class="form-control input-underline input-lg" ng-model="product.Name" placeholder="Nombre del Producto">
-					</div>
-
-					<div class="form-group">
-						<input type="text" class="form-control input-underline input-lg" ng-model="product.Code" placeholder="Codigo del Producto">
-					</div>
-					
-					<div class="form-group">
-						<input type="text" class="form-control input-underline input-lg" ng-model="product.Price" placeholder="Precio">
-					</div>
-
-
-					<div class="form-group">
-						<input type="number" class="form-control input-underline input-lg" ng-model="product.Stock" placeholder="Stock">
-					</div>
-
-					<div class="form-group">
-						<textarea  rows="10" class="form-control input-underline input-lg" ng-model="product.Description" placeholder="Descripción del Producto"></textarea>
-					</div>
-
-				</div>
-
-				<button type="submit" class="btn btn-white btn-outline btn-lg btn-rounded">Guardar</button>
-
-			</form>
-	
+		</div>
 	</div>
+	<div class="jumbotron" style="background-color:#3CA2E0" ng-hide="paymentView">
+		<div class="container">
+		<fieldset>
+				<legend>Red Social?</legend>
+				<input type="checkbox" name="animal" value="Cat" />TODOPAGO<br />
+				<input type="checkbox" name="animal" value="Dog" />MERCADOPAGO<br />
+				<input type="checkbox" name="animal" value="Bird" />DECIDIR<br />
+					<input ng-click="paymentMethod()" type="button" value="Continuar" />
+		
+				
+			</fieldset>
+		</div>
+	</div>
+	<div class="jumbotron" style="background-color:#3CA2E0" ng-hide="shippingView">
+		<div class="container"></div>
 	</div>
 </div>

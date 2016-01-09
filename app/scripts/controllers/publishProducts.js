@@ -10,8 +10,17 @@
 angular.module('yapp')
   .controller('PublishProductsCtrl', function($scope,$http,  $location) {
 
-    $scope.submit = function(){
-    	alert("asasdasdasd");
-    }
+  	$scope.paymentView = true;
+
+  	$scope.shippingView = true;
+
+  	$scope.redSocial = function (){
+  		$scope.paymentView = false;
+  	}
+
+  	$scope.paymentMethod = function(){
+  		$scope.shippingView = false;
+  	}
+    
 
   });
