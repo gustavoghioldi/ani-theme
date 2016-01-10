@@ -11,8 +11,9 @@
 					<td>{{product.stock}} - </td>
 					<td>{{product.codigo}} - </td>
 					<td>{{product.descripcion}} | </td>
-					<td><a href="" ng-click="modificar()">Modificar | </a></td>
-					<td><a href="" ng-click="publicar(product.id)">Publicar</a></td>
+					<td><a href="" ng-click="edit(product.id)">Modificar | </a></td>
+					<td><a href="" ng-click="publish(product.id)">Publicar</a></td>
+					<td><a href="" ng-click="delete(product.id)">Borrar</a></td>
 				</tr>
 			</table>
 		</div>
