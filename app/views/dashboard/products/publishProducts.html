@@ -1,4 +1,4 @@
-<div>
+<div>{{coco}}
 	<h2>Publicar Producto {{productId}}</h2>
 	<span class="glyphicon glyphicon-pencil bg-fade"></span>
 	<div class="jumbotron" style="background-color:#3CA2E0">
@@ -20,7 +20,7 @@
 				<legend>Payment Method?</legend>
 				<input type="checkbox" name="animal" value="Cat" />TODOPAGO<br />
 				<input type="checkbox" name="animal" value="Dog" />MERCADOPAGO<br />
-				<input type="checkbox" name="animal" value="Bird" />DECIDIR<br />
+				<input type="checkbox" name="animal" value="Bird" />Cash on delivery<br />
 			</fieldset>
 		</div>
 	</div>
@@ -28,12 +28,11 @@
 		<div class="container">
 		<fieldset>
 				<legend>Shipping Mtthod?</legend>
-				<input type="checkbox" name="animal" value="Cat" />TODOPAGO<br />
-				<input type="checkbox" name="animal" value="Dog" />MERCADOPAGO<br />
-				<input type="checkbox" name="animal" value="Bird" />DECIDIR<br />
+				<input type="checkbox" name="animal" value="Cat" />OCA<br />
+				<input type="checkbox" name="animal" value="Dog" />Andreani<br />
 			</fieldset>
 		</div>
 	</div>
-	<a class="btn btn-primary btn-lg btn-outline btn-rounded">Publicar</a>
+	<a ng-click="submit()" class="btn btn-primary btn-lg btn-outline btn-rounded">Publicar</a>
 
 </div>
