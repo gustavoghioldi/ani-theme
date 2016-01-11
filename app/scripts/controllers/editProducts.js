@@ -7,12 +7,8 @@
  * # MainCtrl
  * Controller of yapp
  */
-
 angular.module('yapp')
-  .controller('FacebookCtrl', function($scope, $location) {
-   
-    $scope.submit = function() {
-      alert("tiro un post");
-    }
+  .controller('EditProductsCtrl', function($scope, $http, $location) {	
+  	
 
-  });
+});

@@ -8,10 +8,21 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('AddProductsCtrl', function($scope, $location) {	
-    
+  .controller('AddProductsCtrl', function($scope, $http, $location) {	
+  	
     $scope.submit = function(product){
-    	console.log(product);
+
+    	$http({
+  		  method: 'POST',
+    	  url: "http://esocialcommerce.devteam.com.ar/producto",
+    	  data: (product),
+    	  headers: {'Content-Type': 'application/json'},
+
+		}).success(function(res){
+				
+			alert("Su articulo a sido agregado con exito!!!");
+      $location.url("products");
+		});
     }
 
-  });
+});

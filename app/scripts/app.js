@@ -12,7 +12,10 @@ angular
   .module('yapp', [
     'ui.router',
     'ngAnimate'
-  ])
+      ])
+  .constant('apiUrl', 'http://esocialcommerce.devteam.com.ar/')
+  .constant('imgUrl', 'http://esocialcommerce.devteam.com.ar/')
+  
   .config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.when('/dashboard', '/dashboard/miPerfil');
@@ -64,6 +67,12 @@ angular
             parent: 'dashboard',
             templateUrl: 'views/dashboard/products/publishProducts.html',
             controller: "PublishProductsCtrl"
+          })
+          .state('products/editProducts', {
+            url: '/products/editProducts/:productId',
+            parent: 'dashboard',
+            templateUrl: 'views/dashboard/products/editProducts.html',
+            controller: "EditProductsCtrl"
           })
           .state('products', {
             url: '/products',
