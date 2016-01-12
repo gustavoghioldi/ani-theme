@@ -12,6 +12,7 @@ angular
   .module('yapp', [
     'ui.router',
     'ngAnimate'
+    ,'smart-table'
       ])
   .constant('apiUrl', 'http://esocialcommerce.devteam.com.ar/')
   .constant('imgUrl', 'http://esocialcommerce.devteam.com.ar/')

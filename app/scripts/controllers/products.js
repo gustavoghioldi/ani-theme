@@ -10,16 +10,19 @@
 
  angular.module('yapp')
  .controller('ProductsCtrl' ,function($scope,$filter, $http, $state, ProductsService ) {
-    //////////////////////////////////
-    $scope.rowCollection = [
-        {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
-        {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
-        {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
-    ];
 
-    $scope.predicates = ['firstName', 'lastName', 'birthDate', 'balance', 'email'];
-    $scope.selectedPredicate = $scope.predicates[0];
-    ///////////////////////////////////
+    //copy the references (you could clone ie angular.copy but then have to go through a dirty checking for the matches)
+    $scope.displayedCollection = [].concat($scope.products);
+
+
+    //remove to the real data holder
+    $scope.removeItem = function (row) {
+        var index = $scope.products.indexOf(row);
+        if (index !== -1) {
+            $scope.products.splice(index, 1);
+        }
+    }
+
     getProducts();
 
     $scope.publish = function(id){
@@ -42,24 +45,15 @@
                   headers: {'Content-Type': 'application/json'},
 
               }).success(function(res){
-                
-                var index = -1;     
-                var comArr = eval( $scope.products );
-                for( var i = 0; i < comArr.length; i++ ) {
-                    if( comArr[i].id === product.id ) {
-                        index = i;
-                        break;
-                    }
-                }
-                if( index === -1 ) {
-                    alert( "Something gone wrong" );
-                }
-
-                $scope.products.splice( index, 1 );        
-                
-                getProducts();
-                alert("Se borro su producto!!!");
-            });
+                var index = $scope.products.indexOf(product);
+                if (index !== -1) {
+                   $scope.products.splice(index, 1);
+               }
+               
+               getProducts();
+               
+               alert("Se borro su producto!!!");
+           });
           }
       }
 
@@ -72,4 +66,4 @@
 }
 
 });
-   
+
