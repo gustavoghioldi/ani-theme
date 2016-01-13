@@ -4,45 +4,36 @@
 	<div class="jumbotron">
 		<div class="container" >
 
-				<table st-table="displayedCollection" st-safe-src="products" class="table table-striped">
-			<thead>
-			<tr>
-				<th st-sort="nombre">Nombre</th>
-				<th st-sort="codigo">Codigo</th>
-				<th st-sort="precio">Precio</th>
-				<th st-sort="stock">Stock</th>
-			</tr>
-			<tr>
-				<th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr ng-repeat="row in displayedCollection">
-				<td>{{row.nombre}}</td>
-				<td>{{row.codigo}}</td>
-				<td>{{row.precio}}</td>
-				<td>{{row.stock}}</td>
-				<td>
-				<button type="button" ng-click="delete(row)" class="btn btn-sm btn-danger">
-					<i class="glyphicon glyphicon-pencil">
-					</i>
-				</button>
-				</td>
-				<td>
-				<button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
-					<i class="glyphicon glyphicon-remove-circle">
-					</i>
-				</button>
-				</td>
-				<td>
-				<button type="button" ng-click="removeItem(row)" class="btn btn-sm btn-danger">
-					<i class="glyphicon glyphicon-hand-up">
-					</i>
-				</button>
-				</td>
-			</tr>
-			</tbody>
-		</table>
+			<table st-table="displayedCollection" st-safe-src="products" class="table table-striped">
+				<thead>
+					<tr>
+						<th st-sort="nombre">Nombre</th>
+						<th st-sort="codigo">Codigo</th>
+						<th st-sort="precio">Precio</th>
+						<th st-sort="stock">Stock</th>
+					</tr>
+					<tr>
+						<th colspan="5"><input st-search="" class="form-control" placeholder="global search ..." type="text"/></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="row in displayedCollection">
+						<td>{{row.nombre}}</td>
+						<td>{{row.codigo}}</td>
+						<td>{{row.precio}}</td>
+						<td>{{row.stock}}</td>
+						<td>
+							<div class="btn-group" role="group" aria-label="...">
+								<button ng-click="view(row.id)" type="button" class="btn btn-default">
+								<i class="glyphicon glyphicon-eye-open"></i></button>
+								<button ng-click="edit(row.id)" type="button" class="btn btn-default"><i class="glyphicon glyphicon-pencil"></i></button>
+								<button ng-click="delete(row)" type="button" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i></button>
+								<button ng-click="publish(row.id)" type="button" class="btn btn-default"><i class="glyphicon glyphicon-cloud-upload"></i></button>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 	<a ui-sref="products/addProducts" class="btn btn-primary btn-outline">Nuevo</a>

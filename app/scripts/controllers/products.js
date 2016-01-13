@@ -14,15 +14,6 @@
     //copy the references (you could clone ie angular.copy but then have to go through a dirty checking for the matches)
     $scope.displayedCollection = [].concat($scope.products);
 
-
-    //remove to the real data holder
-    $scope.removeItem = function (row) {
-        var index = $scope.products.indexOf(row);
-        if (index !== -1) {
-            $scope.products.splice(index, 1);
-        }
-    }
-
     getProducts();
 
     $scope.publish = function(id){
@@ -30,7 +21,7 @@
     }
 
     $scope.edit = function(id){
-    	$state.go("product/editProducts", {productId:id});
+    	$state.go("products/editProducts", {productId:id});
     }
 
     $scope.delete = function(product){
