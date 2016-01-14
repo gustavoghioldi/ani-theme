@@ -8,7 +8,9 @@
  * Controller of yapp
  */
 angular.module('yapp')
-  .controller('EditProductsCtrl', function($scope, $http, $location) {	
-  	
+  .controller('EditProductsCtrl', function($scope, $http, $location, ProductsService) {	
+
+  	$scope.product = ProductsService.data;
+
 
 });

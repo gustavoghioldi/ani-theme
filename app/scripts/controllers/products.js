@@ -20,8 +20,10 @@
         $state.go("products/publishProducts", {productId:id});
     }
 
-    $scope.edit = function(id){
-    	$state.go("products/editProducts", {productId:id});
+    $scope.edit = function(product){
+      ProductsService.data = product;
+    	$state.go("products/editProducts", {productId:product.id});
+      
     }
 
     $scope.delete = function(product){
@@ -50,10 +52,17 @@
 
   }
 
+
   function getProducts(){
     ProductsService.get().then(function(products){
         $scope.products = products;
     });
+
+    function getProductById(id){
+      ProductsService.getById(id).then(function(product){
+        $scope.product = product;
+      });
+    }
 }
 
 });
