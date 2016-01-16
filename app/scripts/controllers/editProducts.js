@@ -12,5 +12,8 @@ angular.module('yapp')
 
   	$scope.product = ProductsService.data;
 
+  	$scope.submit = function(){
+  		alert($scope.product.id);
+  	}
 
 });
