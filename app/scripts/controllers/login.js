@@ -13,8 +13,11 @@ angular.module('yapp')
     $scope.submit = function() {
 
       $location.path('/dashboard');
+      
+    }
 
-      return false;
+    $scope.signUp = function(){
+    	alert("creamos un nuevo usuario");
     }
 
   });
